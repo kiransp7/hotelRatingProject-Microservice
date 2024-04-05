@@ -1,0 +1,121 @@
+server:
+  port: 8081
+
+# Database and Application name Configurations
+spring:
+  profiles:
+    active: dev
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/userservice
+    username: root
+    password: manager
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+    import: configserver:http://localhost:8085
+        
+
+
+      
+# Logger Configurations    
+logging:
+  file: logger\mylogfile-${LOG_FILE_DATE:-${spring.application.name:-spring}}.log
+  logback:
+    rollingpolicy:
+      max-history: 10
+      max-file-size: 10MB
+  level:
+    root: INFO
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+
+
+
+## eureka Client Configurations  -> USER-SERVICE
+#eureka: 
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#      
+## Actuator Configurations  
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*" # Expose all endpoints
+#  endpoint:
+#    health:
+#      show-details: always # Show full health details
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
